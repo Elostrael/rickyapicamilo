@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 export default function Rickyindividual() {
     const [individual, setIndividual] = useState([])
     const { id } = useParams()
-    const [isLoading, setyIloading] = useState(true)
+    const [isLoading, setsIloading] = useState(true)
     
 
 
@@ -19,13 +19,12 @@ export default function Rickyindividual() {
     .then((response) => response.json())
     .then((response) => setIndividual(response))
 
-if(isloading){
+if(isLoading){
     Swal.fire({tittle: "cargando datos..."})
     Swal.showLoading()
 }    
 else
     Swal.close()
-
 
 
   return (
